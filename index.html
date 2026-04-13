@@ -13,9 +13,6 @@
   <meta property="og:description" content="Andrea DE RE, consultant informatique indépendant à Albi (Tarn, 81). Dépannage, support et conseil informatique sur site ou à distance partout en France. Premier rendez-vous offert." />
   <meta property="og:locale" content="fr_FR" />
   <link rel="canonical" href="https://andreadere.fr/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Schema.org LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -44,7 +41,73 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous le week-end ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les demandes peuvent être envoyées 7 jours sur 7. Les interventions sont planifiées selon les disponibilités de chacun."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le tarif d'une intervention ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les interventions sont facturées au temps passé, sans abonnement ni engagement. Le premier rendez-vous est offert pour évaluer votre situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je avoir un devis gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Le premier échange est gratuit et sans engagement. À l'issue de cet échange, une proposition claire est formulée selon vos besoins réels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous uniquement à Albi ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les interventions sur site couvrent Albi et le Tarn. À distance, toute la France est couverte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Êtes-vous disponible pour les particuliers ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'activité est principalement orientée vers les professionnels, mais certaines demandes de particuliers peuvent être étudiées au cas par cas."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('fonts/inter-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('fonts/inter-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -478,8 +541,8 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>Votre informatique,<br />enfin <em>simple et sans mauvaises surprises</em> - à <em>Albi</em> et dans le Tarn</h1>
-      <p>Andrea DE RE, consultant informatique indépendant à Saint-Juéry. Un seul interlocuteur, des conseils sans conflit d'intérêt, et un accompagnement sur-mesure pour les professionnels.</p>
+      <h1>Votre informatique,<br />enfin <em>simple et sans mauvaises surprises</em> - à <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;"><em>Albi</em></a> et dans le Tarn</h1>
+      <p>Andrea DE RE, consultant informatique indépendant à Saint-Juéry. Un seul interlocuteur, des <a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">conseils</a> sans conflit d'intérêt, et un accompagnement sur-mesure pour les professionnels.</p>
       <div class="hero-btns">
         <a href="contact.html" class="btn btn-primary">Prendre rendez-vous</a>
         <a href="#services" class="btn btn-outline">Découvrir mes services</a>
@@ -525,7 +588,7 @@
         <div class="service-card">
           <span class="service-tag">Intervention</span>
           <h3>Une intervention directe, sans détour</h3>
-          <p>Panne, installation d'un équipement, configuration d'un réseau, mise en place d'un poste de travail. Déplacement sur Albi et le Tarn, ou intervention à distance partout en France. Problème réglé, explication fournie.</p>
+          <p><a href="intervention.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Panne</a>, installation d'un équipement, configuration d'un réseau, mise en place d'un poste de travail. Déplacement sur Albi et le Tarn, ou intervention à distance partout en France. Problème réglé, explication fournie.</p>
           <a href="intervention.html" class="link-arrow">En savoir plus →</a>
         </div>
         <div class="service-card">
@@ -534,6 +597,42 @@
           <p>Quel ordinateur acheter ? Comment organiser vos données ? Quelle solution adopter pour votre activité ? Je pose les bonnes questions, compare les options et vous donne un avis clair - sans rien à vendre.</p>
           <a href="conseil.html" class="link-arrow">En savoir plus →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--white);padding:4rem 0;">
+    <div class="container">
+      <p class="section-label">Questions fréquentes</p>
+      <h2 class="section-title">Ce que vous voulez savoir</h2>
+      <div style="max-width:780px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem;">
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Intervenez-vous le week-end ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Les demandes peuvent être envoyées 7 jours sur 7. Les interventions sont planifiées selon les disponibilités de chacun.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Quel est le tarif d'une intervention ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Les interventions sont facturées au temps passé, sans abonnement ni engagement. Le premier rendez-vous est offert pour évaluer votre situation.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Puis-je avoir un devis gratuit ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Oui. Le premier échange est gratuit et sans engagement. À l'issue de cet échange, une proposition claire est formulée selon vos besoins réels.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Intervenez-vous uniquement à Albi ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Les interventions sur site couvrent <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Albi et le Tarn</a>. À distance, toute la France est couverte.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Êtes-vous disponible pour les particuliers ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">L'activité est principalement orientée vers les professionnels, mais certaines demandes de particuliers peuvent être étudiées au cas par cas.</p>
+        </details>
+
       </div>
     </div>
   </section>
@@ -558,6 +657,8 @@
       </div>
       <p class="footer-copy">© 2026 Andrea DE RE - Consultant informatique indépendant - Albi et le Tarn (81)</p>
       <a href="mentions-legales.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Mentions légales</a>
+      &nbsp;·&nbsp;
+      <a href="albi.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Albi</a>
     </div>
   </footer>
 
