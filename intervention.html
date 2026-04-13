@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Dépannage et maintenance informatique Albi — Intervention sur site et à distance toute France | Andrea DE RE</title>
+  <meta name="description" content="Dépannage et maintenance informatique à Albi et dans le Tarn (81). Intervention sur site ou à distance partout en France. Pannes, installations, réseaux, support informatique. Premier rendez-vous offert." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andreadere.fr/intervention.html" />
+  <meta property="og:title" content="Dépannage et maintenance informatique Albi — Intervention sur site et à distance | Andrea DE RE" />
+  <meta property="og:description" content="Dépannage et maintenance informatique à Albi et dans le Tarn (81). Intervention sur site ou à distance partout en France. Pannes, installations, réseaux, support informatique." />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="canonical" href="https://andreadere.fr/intervention.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f7f4;
+      --primary: #1e3a5f;
+      --accent: #2e86c1;
+      --text-secondary: #5d6d7e;
+      --white: #ffffff;
+      --border: #e2e0db;
+    }
+
+    html { scroll-behavior: smooth; background: var(--primary); }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAVIGATION ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .nav-logo span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--primary) !important; color: var(--white) !important; }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; padding-top: 1rem; }
+      .nav-links a { font-size: 1rem; }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2a4f7a 100%);
+      color: var(--white);
+      padding: 4rem 1.5rem 3.5rem;
+    }
+
+    .page-hero-inner { max-width: 780px; }
+
+    .page-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      opacity: 0.88;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+    .btn-accent { background: var(--accent); color: var(--white); }
+    .btn-accent:hover { background: #2474a8; }
+
+    /* ── SECTIONS ── */
+    section { padding: 4rem 1.5rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── LISTE D'INTERVENTIONS ── */
+    .interventions-list { background: var(--white); }
+
+    .int-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .int-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+    }
+
+    .int-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 0.15rem;
+    }
+
+    .int-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--primary);
+    }
+
+    .int-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ── COMMENT ÇA SE PASSE ── */
+    .how { background: var(--bg); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      counter-reset: steps;
+    }
+
+    .step {
+      counter-increment: steps;
+      padding: 2rem 1.5rem;
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .step::before {
+      content: counter(steps);
+      display: block;
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 36px;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── ZONE D'INTERVENTION ── */
+    .zone { background: var(--white); }
+
+    .zone-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 640px) {
+      .zone-content { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .zone-block h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .zone-block p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .zone-tag {
+      display: inline-block;
+      background: #e8f4fc;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── BANDEAU CTA ── */
+    .cta-band {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-band p {
+      opacity: 0.85;
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+
+    .badge-offert {
+      display: inline-block;
+      background: #f0a500;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.75);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.9); transition: color 0.2s; }
+    footer a:hover { color: var(--white); }
+
+    .footer-inner { max-width: 700px; margin: 0 auto; }
+
+    .footer-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-contact a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .footer-copy { font-size: 0.8rem; opacity: 0.6; }
+
+    /* ── ICÔNES SVG ── */
+    .icon-svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .icon-footer {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(255,255,255,0.85);
+      vertical-align: middle;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Andrea DE RE
+        <span>Consultant informatique</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="intervention.html" class="active">Intervention</a></li>
+        <li><a href="conseil.html">Conseil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="nav-cta">Prendre rendez-vous</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="page-tag">Intervention</span>
+        <h1>Dépannage et installation informatique à <span>Albi</span> et dans le Tarn</h1>
+        <p>Votre ordinateur ne démarre plus, votre réseau est lent, vous venez d'acheter un équipement et ne savez pas comment l'installer ? Déplacement sur site ou intervention à distance - avec une explication claire de ce qui a été fait. Maintenance, support informatique et infogérance pour les structures professionnelles de taille humaine.</p>
+        <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPES D'INTERVENTIONS -->
+  <section class="interventions-list">
+    <div class="container">
+      <p class="section-label">Les interventions</p>
+      <h2 class="section-title">Des interventions concrètes, sans jargon</h2>
+      <p class="section-lead">Tout ce qui touche à l'informatique du quotidien, pour les structures professionnelles de taille humaine.</p>
+
+      <div class="int-grid">
+        <div class="int-item">
+          <span class="int-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span>
+          <div>
+            <h3>Pannes et dysfonctionnements</h3>
+            <p>Ordinateur qui ne démarre plus, logiciel qui plante, lenteurs inexpliquées, erreurs répétées. Diagnostic et résolution.</p>
+          </div>
+        </div>
+        <div class="int-item">
+          <span class="int-icon"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <div>
+            <h3>Installation et configuration de postes</h3>
+            <p>Mise en place d'un nouvel ordinateur, installation des logiciels, création des comptes, récupération de vos données depuis l'ancien matériel.</p>
+          </div>
+        </div>
+        <div class="int-item">
+          <span class="int-icon"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span>
+          <div>
+            <h3>Réseau et connexion internet</h3>
+            <p>Réseau lent, coupures fréquentes, Wi-Fi qui ne couvre pas toutes les pièces, branchement d'imprimante réseau ou de serveur de fichiers.</p>
+          </div>
+        </div>
+        <div class="int-item">
+          <span class="int-icon"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="6,9 6,2 18,2 18,9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>
+          <div>
+            <h3>Périphériques et équipements</h3>
+            <p>Installation d'imprimantes, de scanners, de disques externes, de caméras ou de tout autre équipement qui ne se configure pas seul.</p>
+          </div>
+        </div>
+        <div class="int-item">
+          <span class="int-icon"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
+          <div>
+            <h3>Sécurité et virus</h3>
+            <p>Suppression de logiciels malveillants, mise en place d'une protection adaptée, sensibilisation aux bons réflexes au quotidien.</p>
+          </div>
+        </div>
+        <div class="int-item">
+          <span class="int-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg></span>
+          <div>
+            <h3>Sauvegarde et récupération de données</h3>
+            <p>Mise en place d'une sauvegarde automatique fiable, récupération de fichiers supprimés ou perdus suite à une panne.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT ÇA SE PASSE -->
+  <section class="how">
+    <div class="container">
+      <p class="section-label">Déroulement</p>
+      <h2 class="section-title">Comment se passe une intervention ?</h2>
+      <p class="section-lead">Du premier contact à la résolution, voici comment se déroule une intervention.</p>
+
+      <div class="steps">
+        <div class="step">
+          <h3>Vous me contactez</h3>
+          <p>Par téléphone, email ou via le formulaire. Vous me décrivez le problème - pas besoin d'être précis, des questions sont posées.</p>
+        </div>
+        <div class="step">
+          <h3>On évalue ensemble</h3>
+          <p>Lors du premier échange (offert), on détermine si une intervention à distance suffit ou si je dois me déplacer.</p>
+        </div>
+        <div class="step">
+          <h3>L'intervention</h3>
+          <p>Sur place ou à distance, résolution méthodique, avec des explications au fur et à mesure.</p>
+        </div>
+        <div class="step">
+          <h3>Vous comprenez et contrôlez</h3>
+          <p>Avant de partir, explication de ce qui s'est passé, de ce qui a été fait, et comment éviter que ça ne se reproduise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE D'INTERVENTION -->
+  <section class="zone">
+    <div class="container">
+      <p class="section-label">Zones d'intervention</p>
+      <h2 class="section-title">Sur place dans le Tarn, à distance partout en France</h2>
+
+      <div class="zone-content">
+        <div class="zone-block">
+          <span class="zone-tag">Déplacement</span>
+          <h3>Albi, Saint-Juéry et les alentours</h3>
+          <p>Déplacements à domicile ou dans vos locaux sur Albi, Saint-Juéry et les communes proches du Tarn (81). Les frais de déplacement sont communiqués à l'avance.</p>
+        </div>
+        <div class="zone-block">
+          <span class="zone-tag">À distance</span>
+          <h3>Toute la France</h3>
+          <p>Beaucoup de problèmes se règlent sans déplacement. Via une connexion sécurisée à votre ordinateur, intervention à distance partout en France - aussi efficacement que sur place pour la majorité des cas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="badge-offert">Offre de bienvenue</span>
+      <h2>Premier rendez-vous offert</h2>
+      <p>On discute de votre problème, j'évalue la situation, et vous repartez avec une réponse claire - sans engagement ni frais.</p>
+      <a href="contact.html" class="btn btn-accent">Réserver maintenant</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <a href="tel:+33744744927"><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11.35 19.79 19.79 0 01.61 2.72 2 2 0 012.6.54h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006.29 6.29l.96-1.95a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 07 44 74 49 27</a>
+        <a href="mailto:contact@andreadere.fr"><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg> contact@andreadere.fr</a>
+        <span><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Albi et le Tarn (81)</span>
+      </div>
+      <p class="footer-copy">© 2026 Andrea DE RE - Consultant informatique indépendant - Albi et le Tarn (81)</p>
+      <a href="mentions-legales.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

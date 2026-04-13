@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Prendre rendez-vous — Consultant informatique Albi et à distance | Andrea DE RE</title>
+  <meta name="description" content="Prenez rendez-vous avec Andrea DE RE, consultant informatique à Albi (81). Premier rendez-vous offert. Intervention sur site dans le Tarn ou à distance partout en France." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andreadere.fr/contact.html" />
+  <meta property="og:title" content="Prendre rendez-vous — Consultant informatique Albi et à distance | Andrea DE RE" />
+  <meta property="og:description" content="Prenez rendez-vous avec Andrea DE RE, consultant informatique à Albi (81). Premier rendez-vous offert. Intervention sur site dans le Tarn ou à distance partout en France." />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="canonical" href="https://andreadere.fr/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f7f4;
+      --primary: #1e3a5f;
+      --accent: #2e86c1;
+      --text-secondary: #5d6d7e;
+      --white: #ffffff;
+      --border: #e2e0db;
+    }
+
+    html { scroll-behavior: smooth; background: var(--primary); }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAVIGATION ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .nav-logo span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--primary) !important; color: var(--white) !important; }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; padding-top: 1rem; }
+      .nav-links a { font-size: 1rem; }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2a4f7a 100%);
+      color: var(--white);
+      padding: 4rem 1.5rem 3.5rem;
+      text-align: center;
+    }
+
+    .page-hero-inner { max-width: 680px; margin: 0 auto; }
+
+    .badge-offert {
+      display: inline-block;
+      background: #f0a500;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      opacity: 0.88;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 4rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    /* ── GRILLE CONTACT ── */
+    .contact-section { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 760px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ── CALENDLY ── */
+    .calendly-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .calendly-block h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .calendly-block p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    #cal-placeholder {
+      min-height: 200px;
+      background: #f0eee9;
+      border-radius: 8px;
+      border: 2px dashed var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      gap: 0.5rem;
+    }
+
+    /* ── EMAIL BLOCK ── */
+    .email-block {
+      padding: 2.5rem 2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .email-block h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .email-block .email-intro {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+
+    .email-link-big {
+      display: inline-block;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 700;
+      color: var(--accent);
+      word-break: break-all;
+      margin-bottom: 0.6rem;
+      transition: color 0.2s;
+    }
+
+    .email-link-big:hover { color: var(--primary); }
+
+    .email-plain {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+
+    .email-plain code {
+      font-family: 'Inter', monospace;
+      background: #e8e6e1;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.86rem;
+      color: var(--primary);
+      user-select: all;
+    }
+
+    /* ── CONTACTS DIRECTS ── */
+    .direct-contact { background: var(--bg); }
+
+    .direct-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 780px;
+    }
+
+    .direct-card {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      padding: 1.75rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .direct-card:hover {
+      box-shadow: 0 4px 16px rgba(30,58,95,0.1);
+      transform: translateY(-2px);
+    }
+
+    .direct-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .direct-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      margin-bottom: 0.2rem;
+    }
+
+    .direct-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .direct-sub {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.75);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.9); transition: color 0.2s; }
+    footer a:hover { color: var(--white); }
+    .footer-inner { max-width: 700px; margin: 0 auto; }
+
+    .footer-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-copy { font-size: 0.8rem; opacity: 0.6; }
+
+    /* ── ICÔNES SVG ── */
+    .icon-svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .icon-footer {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(255,255,255,0.85);
+      vertical-align: middle;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Andrea DE RE
+        <span>Consultant informatique</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="intervention.html">Intervention</a></li>
+        <li><a href="conseil.html">Conseil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="nav-cta active">Prendre rendez-vous</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="badge-offert">Premier rendez-vous offert</span>
+        <h1>Parlons de votre situation</h1>
+        <p>Réservez un créneau en ligne ou écrivez-moi directement. Je réponds dans les 24 heures ouvrées.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE + CALENDLY -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- CAL.COM -->
+        <div class="calendly-block">
+          <h2>Réserver un créneau en ligne</h2>
+          <p>Sélectionnez directement une date et une heure qui vous conviennent. Le premier rendez-vous est gratuit.</p>
+
+          <!--
+            ══════════════════════════════════════════════
+            INTÉGRATION CAL.COM - Instructions
+            ══════════════════════════════════════════════
+            1. Créez votre compte sur https://cal.com
+            2. Créez un type d'événement :
+               "Premier rendez-vous (30 min) - Gratuit"
+            3. Allez dans l'onglet Embed de votre événement
+            4. Choisissez "Inline" et copiez le code généré
+            5. Remplacez le div#cal-placeholder ci-dessous
+               par le code fourni par Cal.com
+            ══════════════════════════════════════════════
+          -->
+          <div id="cal-placeholder">
+            <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <strong style="color:var(--primary);font-size:1rem">Calendrier en cours d'installation</strong>
+            <span>En attendant, contactez-moi directement par email ou par téléphone.</span>
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="email-block">
+          <h2>Écrire un email</h2>
+          <p class="email-intro">Vous pouvez aussi me joindre directement par email - je réponds sous 24 heures ouvrées.</p>
+          <a href="mailto:contact@andreadere.fr" class="email-link-big">contact@andreadere.fr</a>
+          <p class="email-plain">Si le lien ne fonctionne pas, copiez l'adresse : <code>contact@andreadere.fr</code></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS DIRECTS -->
+  <section class="direct-contact">
+    <div class="container">
+      <p class="section-label">Contact direct</p>
+      <h2 class="section-title">Vous préférez nous parler directement ?</h2>
+
+      <div class="direct-grid">
+        <a href="tel:+33744744927" class="direct-card">
+          <span class="direct-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11.35 19.79 19.79 0 01.61 2.72 2 2 0 012.6.54h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006.29 6.29l.96-1.95a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+          <div>
+            <p class="direct-label">Téléphone</p>
+            <p class="direct-value">07 44 74 49 27</p>
+            <p class="direct-sub">7 jours sur 7</p>
+          </div>
+        </a>
+        <a href="mailto:contact@andreadere.fr" class="direct-card">
+          <span class="direct-icon"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></span>
+          <div>
+            <p class="direct-label">Email</p>
+            <p class="direct-value">contact@andreadere.fr</p>
+            <p class="direct-sub">Réponse sous 24h ouvrées</p>
+          </div>
+        </a>
+        <div class="direct-card" style="cursor:default">
+          <span class="direct-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+          <div>
+            <p class="direct-label">Localisation</p>
+            <p class="direct-value">Saint-Juéry (81)</p>
+            <p class="direct-sub">Interventions sur Albi et le Tarn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUI SE PASSE ENSUITE -->
+  <section style="background:var(--bg);padding:4rem 0;">
+    <div class="container">
+      <p class="section-label">Après votre prise de contact</p>
+      <h2 class="section-title">Ce qui se passe ensuite</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2rem;">
+        <div class="arg-card">
+          <div class="arg-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11.35 19.79 19.79 0 01.61 2.72 2 2 0 012.6.54h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006.29 6.29l.96-1.95a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <h3>Réponse sous 24h</h3>
+          <p>Un premier échange pour comprendre votre situation, sans engagement.</p>
+        </div>
+        <div class="arg-card">
+          <div class="arg-icon"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Rendez-vous offert</h3>
+          <p>Le premier rendez-vous est gratuit. On fait le point ensemble sur vos besoins.</p>
+        </div>
+        <div class="arg-card">
+          <div class="arg-icon"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Une proposition claire</h3>
+          <p>Pas de devis incompréhensible. Une réponse adaptée à votre situation, expliquée simplement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <a href="tel:+33744744927"><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11.35 19.79 19.79 0 01.61 2.72 2 2 0 012.6.54h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006.29 6.29l.96-1.95a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 07 44 74 49 27</a>
+        <a href="mailto:contact@andreadere.fr"><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg> contact@andreadere.fr</a>
+        <span><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Albi et le Tarn (81)</span>
+      </div>
+      <p class="footer-copy">© 2026 Andrea DE RE - Consultant informatique indépendant - Albi et le Tarn (81)</p>
+      <a href="mentions-legales.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

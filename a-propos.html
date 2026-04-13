@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Andrea DE RE — Consultant informatique indépendant à Albi, Tarn (81)</title>
+  <meta name="description" content="Andrea DE RE, consultant informatique indépendant basé à Albi (Tarn, 81). Sept ans d'expérience en support, maintenance et conseil informatique. Intervention sur site et à distance." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andreadere.fr/a-propos.html" />
+  <meta property="og:title" content="Andrea DE RE — Consultant informatique indépendant à Albi, Tarn (81)" />
+  <meta property="og:description" content="Sept ans d'expérience en support, maintenance et conseil informatique. Intervention sur site à Albi et le Tarn, ou à distance partout en France." />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="canonical" href="https://andreadere.fr/a-propos.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f7f4;
+      --primary: #1e3a5f;
+      --accent: #2e86c1;
+      --text-secondary: #5d6d7e;
+      --white: #ffffff;
+      --border: #e2e0db;
+    }
+
+    html { scroll-behavior: smooth; background: var(--primary); }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAVIGATION ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .nav-logo span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--primary) !important; color: var(--white) !important; }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; padding-top: 1rem; }
+      .nav-links a { font-size: 1rem; }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2a4f7a 100%);
+      color: var(--white);
+      padding: 4rem 1.5rem 3.5rem;
+    }
+
+    .page-hero-inner { max-width: 780px; }
+
+    .page-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      opacity: 0.88;
+      max-width: 620px;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 4rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── INTRO AVEC PHOTO ── */
+    .intro { background: var(--white); }
+
+    .intro-content {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .intro-content { grid-template-columns: 1fr; gap: 2rem; }
+      .photo-wrap { text-align: center; }
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 12px;
+      border: 3px solid var(--border);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      background: #e2e0db;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      max-width: 240px;
+      aspect-ratio: 3/4;
+      border-radius: 12px;
+      border: 2px dashed var(--border);
+      background: #f0eee9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 1.5rem;
+      gap: 0.5rem;
+    }
+
+    .photo-placeholder span { font-size: 2.5rem; }
+
+    .intro-text p {
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .intro-text p:first-child { color: var(--primary); font-size: 1.1rem; font-weight: 500; }
+
+    /* ── PARCOURS ── */
+    .parcours { background: var(--bg); }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 700px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 24px;
+      bottom: 24px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      padding-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-dot.current {
+      background: var(--primary);
+      width: 42px;
+      height: 42px;
+      border: 3px solid var(--accent);
+    }
+
+    .timeline-body {
+      padding-top: 0.45rem;
+      flex: 1;
+    }
+
+    .timeline-period {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-body p {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ── VALEURS ── */
+    .valeurs { background: var(--white); }
+
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .valeur-card {
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+    }
+
+    .valeur-icon { font-size: 1.8rem; margin-bottom: 0.85rem; }
+
+    .valeur-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .valeur-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ── BANDEAU CTA ── */
+    .cta-band {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-band p {
+      opacity: 0.85;
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+
+    .badge-offert {
+      display: inline-block;
+      background: #f0a500;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .btn-accent { background: var(--accent); color: var(--white); }
+    .btn-accent:hover { background: #2474a8; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.75);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.9); transition: color 0.2s; }
+    footer a:hover { color: var(--white); }
+    .footer-inner { max-width: 700px; margin: 0 auto; }
+
+    .footer-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-copy { font-size: 0.8rem; opacity: 0.6; }
+
+    /* ── ICÔNES SVG ── */
+    .icon-svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .icon-footer {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(255,255,255,0.85);
+      vertical-align: middle;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Andrea DE RE
+        <span>Consultant informatique</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="intervention.html">Intervention</a></li>
+        <li><a href="conseil.html">Conseil</a></li>
+        <li><a href="a-propos.html" class="active">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="nav-cta">Prendre rendez-vous</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="page-tag">À propos</span>
+        <h1>L'informaticien indépendant d'<span>Albi</span> qui travaille pour vous - pas pour une enseigne</h1>
+        <p>Je m'appelle Andrea DE RE. Voilà sept ans que je vis de l'informatique, et quatre ans que je le fais en indépendant, à Saint-Juéry, pour des gens comme vous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO + PHOTO -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-content">
+        <div class="photo-wrap">
+                    <img src="img/andrea-de-re.jpg" alt="Andrea DE RE, consultant informatique indépendant à Albi" style="width:100%; max-width:400px; height:auto; border-radius:12px; image-rendering:auto;" />
+        </div>
+        <div class="intro-text">
+          <p><strong>Consultant informatique basé à Saint-Juéry, dans le Tarn. Interventions sur site principalement sur Albi et ses environs, et à distance sur toute la France.</strong></p>
+          <p>Cette page existe probablement parce que vous cherchez quelqu'un de confiance pour votre informatique - sans jargon, sans pression commerciale, sans qu'on essaie de vous vendre ce dont vous n'avez pas besoin.</p>
+          <p>C'est exactement ce qui est proposé ici. Pas de catalogue, pas de conflit d'intérêt. Du temps et de l'expérience, au service de ce qui est vraiment utile.</p>
+          <p>Le choix de travailler sans structure imposée permet une chose simple : prendre le temps de comprendre chaque situation et s'impliquer comme si c'était sa propre entreprise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section class="parcours">
+    <div class="container">
+      <p class="section-label">Mon parcours</p>
+      <h2 class="section-title">Du terrain à l'indépendance</h2>
+      <p class="section-lead">Sept ans d'expérience qui partent du concret et remontent vers le conseil.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-body">
+            <p class="timeline-period">Pendant 3 ans</p>
+            <h3>Technicien informatique</h3>
+            <p>J'ai commencé par le terrain : diagnostics, réparations, installations, configurations. J'ai appris à résoudre des problèmes concrets sur du matériel réel, à comprendre les pannes dans leur environnement réel, et à parler de technique à des gens qui ne sont pas techniciens.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-body">
+            <p class="timeline-period">Puis pendant 3 ans</p>
+            <h3>Responsable technique</h3>
+            <p>J'ai pris en charge la coordination technique d'une structure : gestion du parc informatique, supervision des projets, choix des équipements et des solutions. J'ai appris à prendre du recul, à prendre des décisions avec des contraintes réelles - budgets, utilisateurs, délais.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot current">✦</div>
+          <div class="timeline-body">
+            <p class="timeline-period">Depuis 4 ans</p>
+            <h3>Consultant informatique indépendant - Saint-Juéry (81)</h3>
+            <p>J'ai franchi le pas de l'indépendance pour travailler autrement : avec plus de liberté, plus d'engagement envers chaque client, et sans les contraintes qui m'auraient empêché d'être vraiment honnête. Je choisis d'exercer à Saint-Juéry, de servir en priorité le bassin d'Albi, et d'intervenir à distance pour ceux qui en ont besoin partout en France.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="valeurs">
+    <div class="container">
+      <p class="section-label">Ce qui me guide</p>
+      <h2 class="section-title">Quatre valeurs, pas un discours marketing</h2>
+      <p class="section-lead">Ce sont les principes qui définissent concrètement comment je travaille, pas des mots sur un site.</p>
+
+      <div class="valeurs-grid">
+        <div class="valeur-card">
+          <div class="valeur-icon"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Adaptabilité</h3>
+          <p>Aucune solution standard n'est appliquée d'office. Le temps est pris de comprendre le contexte spécifique avant toute proposition. Ce qui fonctionne pour l'un ne fonctionne pas forcément pour l'autre.</p>
+        </div>
+        <div class="valeur-card">
+          <div class="valeur-icon"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Transparence</h3>
+          <p>Chaque action est expliquée — ce qui a été fait, pourquoi, et ce que ça implique. Pas d'impression floue en partant. Vous comprenez ce qui a été fait et vous reprenez le contrôle.</p>
+        </div>
+        <div class="valeur-card">
+          <div class="valeur-icon"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="20"/><path d="M6 9l-4 7h8z"/><path d="M18 9l-4 7h8z"/><line x1="9" y1="20" x2="15" y2="20"/></svg></div>
+          <h3>Neutralité</h3>
+          <p>Aucune marque n'est représentée. Aucun intérêt commercial n'oriente les recommandations vers un produit plutôt qu'un autre. Les recommandations sont guidées uniquement par votre intérêt.</p>
+        </div>
+        <div class="valeur-card">
+          <div class="valeur-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h3>Engagement</h3>
+          <p>Pas d'intervention expédiée. L'implication dure dans le temps, avec une disponibilité maintenue et un suivi quand une nouvelle question se pose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="badge-offert">Offre de bienvenue</span>
+      <h2>Premier rendez-vous offert</h2>
+      <p>Prenons le temps de nous parler. Je vous écoute, j'évalue votre situation, et vous repartez avec une vision claire - sans engagement.</p>
+      <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <a href="tel:+33744744927"><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 11.35 19.79 19.79 0 01.61 2.72 2 2 0 012.6.54h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006.29 6.29l.96-1.95a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 07 44 74 49 27</a>
+        <a href="mailto:contact@andreadere.fr"><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg> contact@andreadere.fr</a>
+        <span><svg class="icon-svg icon-footer" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Albi et le Tarn (81)</span>
+      </div>
+      <p class="footer-copy">© 2026 Andrea DE RE - Consultant informatique indépendant - Albi et le Tarn (81)</p>
+      <a href="mentions-legales.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>
