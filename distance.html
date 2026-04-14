@@ -6,17 +6,17 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
-  <title>Technicien et consultant informatique Albi — Dépannage, réparation et conseil | Andrea DE RE</title>
-  <meta name="description" content="Technicien et consultant informatique à Albi (81). Dépannage, réparation, assistance et maintenance informatique pour les professionnels. Intervention sur site à Albi et le Tarn. Premier rendez-vous offert." />
+  <title>Consultant informatique à distance — Support et conseil partout en France | Andrea DE RE</title>
+  <meta name="description" content="Support informatique à distance partout en France. Dépannage, conseil, assistance et maintenance pour les professionnels. Intervention rapide sans déplacement. Premier rendez-vous offert." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Andrea DE RE" />
   <link rel="me" href="https://www.linkedin.com/in/andreadere" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://andreadere.fr/albi.html" />
-  <meta property="og:title" content="Technicien et consultant informatique Albi — Dépannage, réparation et conseil | Andrea DE RE" />
-  <meta property="og:description" content="Technicien et consultant informatique à Albi (81). Dépannage, réparation, assistance et maintenance informatique pour les professionnels. Intervention sur site à Albi et le Tarn." />
+  <meta property="og:url" content="https://andreadere.fr/distance.html" />
+  <meta property="og:title" content="Consultant informatique à distance — Support et conseil partout en France | Andrea DE RE" />
+  <meta property="og:description" content="Support informatique à distance partout en France. Dépannage, conseil, assistance et maintenance pour les professionnels. Intervention rapide sans déplacement. Premier rendez-vous offert." />
   <meta property="og:locale" content="fr_FR" />
-  <link rel="canonical" href="https://andreadere.fr/albi.html" />
+  <link rel="canonical" href="https://andreadere.fr/distance.html" />
 
   <!-- Schema.org LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -31,7 +31,7 @@
     ],
     "serviceType": ["Dépannage informatique", "Maintenance informatique", "Support informatique", "Conseil informatique", "Infogérance"],
     "description": "Consultant informatique indépendant spécialisé en intervention et conseil, sans conflit d'intérêt commercial. Intervient sur Albi, Saint-Juéry et le Tarn.",
-    "url": "https://andreadere.fr/albi.html",
+    "url": "https://andreadere.fr",
     "telephone": "+33744744927",
     "email": "contact@andreadere.fr",
     "address": {
@@ -45,6 +45,39 @@
     "sameAs": [
       "https://www.linkedin.com/in/andreadere",
       "https://andreadere.fr"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Peut-on vraiment tout régler à distance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La grande majorité des problèmes logiciels, de configuration et de conseil se règlent à distance. Pour les pannes matérielles, un déplacement sur site peut être nécessaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment se passe une intervention à distance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Via une connexion sécurisée, l'accès à votre ordinateur est temporaire et sous votre contrôle. Vous voyez tout ce qui est fait en temps réel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous partout en France ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, les interventions à distance couvrent toute la France, sans frais de déplacement."
+        }
+      }
     ]
   }
   </script>
@@ -261,18 +294,11 @@
       line-height: 1.25;
     }
 
-    .section-lead {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      line-height: 1.75;
-    }
-
-    /* ── SECTIONS CONTENU ── */
-    .intro { background: var(--white); }
-    .interventions { background: var(--bg); }
-    .zones { background: var(--white); }
-    .local { background: var(--bg); }
+    /* ── CONTENT BLOCKS ── */
+    .fonctionnement { background: var(--white); }
+    .services { background: var(--bg); }
+    .independant { background: var(--white); }
+    .zones { background: var(--bg); }
 
     .content-block { max-width: 780px; }
 
@@ -293,22 +319,36 @@
 
     .content-block p:last-child { margin-bottom: 0; }
 
-    /* ── ZONES GRID ── */
-    .zones-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.25rem;
+    /* ── SERVICES GRID ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      max-width: 900px;
     }
 
-    .zone-tag {
-      display: inline-block;
-      background: #e8f4fc;
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 0.3rem 0.85rem;
-      border-radius: 4px;
+    .service-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .service-item::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
     }
 
     /* ── BANDEAU CTA ── */
@@ -373,7 +413,6 @@
 
     .footer-copy { font-size: 0.8rem; opacity: 0.6; }
 
-    /* ── ICÔNES SVG ── */
     .icon-svg {
       width: 28px;
       height: 28px;
@@ -393,47 +432,6 @@
     }
 
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Êtes-vous basé à Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Basé à Saint-Juéry, à quelques minutes d'Albi. Les interventions sur site couvrent Albi et l'ensemble du bassin albigeois."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Intervenez-vous dans toute la ville d'Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, les interventions couvrent l'ensemble de la commune d'Albi ainsi que les communes voisines : Saint-Juéry, Lescure-d'Albigeois, Le Séquestre, Puygouzon, Marssac-sur-Tarn et Carmaux."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Combien de temps faut-il pour obtenir une intervention à Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Les demandes sont traitées dans les meilleurs délais. Pour les situations urgentes, contactez directement par téléphone pour évaluer la situation rapidement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Travaillez-vous avec des entreprises locales à Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, l'activité est principalement orientée vers les professionnels - artisans, commerçants, professions libérales, associations - basés sur Albi et le Tarn."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -463,60 +461,71 @@
   <section class="page-hero">
     <div class="container">
       <div class="page-hero-inner">
-        <span class="page-tag">Intervention locale</span>
-        <h1>Technicien et consultant informatique à Albi — dépannage, réparation, conseil et assistance</h1>
-        <p>Basé à Saint-Juéry, à quelques minutes d'Albi. Un seul interlocuteur, disponible 7 jours sur 7.</p>
+        <span class="page-tag">À distance</span>
+        <h1>Consultant informatique à distance — support et conseil partout en France</h1>
+        <p>Basé à Albi, dans le Tarn. Interventions à distance sur toute la France pour les professionnels.</p>
         <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
       </div>
     </div>
   </section>
 
-  <!-- INTRODUCTION -->
-  <section class="intro">
+  <!-- COMMENT ÇA FONCTIONNE -->
+  <section class="fonctionnement">
     <div class="container">
       <div class="content-block">
-        <p class="section-label">Présentation</p>
-        <p>Basé à Saint-Juéry, à quelques minutes d'Albi, Andrea DE RE intervient sur le bassin albigeois pour tous les besoins informatiques des professionnels et des structures de taille humaine. <a href="intervention.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Dépannage sur site</a>, maintenance, <a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">infogérance</a>, <a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">conseil sans conflit d'intérêt</a> - un seul interlocuteur, disponible 7 jours sur 7.</p>
+        <h2>Comment ça fonctionne</h2>
+        <p>Une connexion sécurisée permet d'intervenir directement sur votre ordinateur, où que vous soyez en France. Pas de déplacement, pas de délai d'acheminement. La majorité des problèmes informatiques se règlent à distance - aussi efficacement que sur place. La <a href="tarifs.html" style="color:var(--accent);text-decoration:none;font-weight:500;">facturation</a> porte uniquement sur le temps passé - sans frais de déplacement.</p>
       </div>
     </div>
   </section>
 
-  <!-- INTERVENTIONS -->
-  <section class="interventions">
+  <!-- POURQUOI LA DISTANCE FONCTIONNE -->
+  <section style="background:var(--white);padding:4rem 0;">
     <div class="container">
       <div class="content-block">
-        <h2>Interventions à Albi et ses environs</h2>
-        <p>Que ce soit pour <a href="blog-panne-ordinateur.html" style="color:var(--accent);text-decoration:none;font-weight:500;">une panne qui bloque votre activité</a>, une installation de réseau, la configuration d'un nouveau poste ou un <a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">conseil sur vos outils numériques</a>, les <a href="tarifs.html" style="color:var(--accent);text-decoration:none;font-weight:500;">interventions</a> se font directement dans vos locaux. Pas de délai d'acheminement, pas de centre d'appels - une réponse directe, par une personne qui connaît votre environnement.</p>
+        <h2>Pourquoi la distance fonctionne</h2>
+        <p>La connexion à distance n'est pas un pis-aller - c'est souvent la solution la plus rapide. Pas de temps de trajet, intervention déclenchée en quelques minutes. Pour les problèmes logiciels, de configuration, de sauvegarde ou de <a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">conseil</a>, le résultat est identique à une intervention sur place.</p>
+        <p style="margin-top:1rem;">Pour les structures qui ont besoin d'un suivi régulier, c'est la formule idéale : un interlocuteur unique, joignable rapidement, sans contrainte géographique. Les clients basés à <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Albi et dans le Tarn</a> bénéficient en plus de la possibilité d'un déplacement sur site si nécessaire.</p>
       </div>
     </div>
   </section>
 
-  <!-- ZONES COUVERTES -->
-  <section class="zones">
+  <!-- CE QU'ON PEUT FAIRE À DISTANCE -->
+  <section class="services">
     <div class="container">
       <div class="content-block">
-        <h2>Zones couvertes</h2>
-        <p>Les déplacements couvrent Albi et ses environs : Saint-Juéry, Lescure-d'Albigeois, Le Séquestre, Puygouzon, Marssac-sur-Tarn et Carmaux. Pour les autres communes du Tarn, chaque demande est étudiée au cas par cas. Les interventions à distance couvrent toute la France.</p>
-        <div class="zones-tags">
-          <span class="zone-tag">Albi</span>
-          <span class="zone-tag">Saint-Juéry</span>
-          <span class="zone-tag">Lescure-d'Albigeois</span>
-          <span class="zone-tag">Le Séquestre</span>
-          <span class="zone-tag">Puygouzon</span>
-          <span class="zone-tag">Marssac-sur-Tarn</span>
-          <span class="zone-tag">Carmaux</span>
-          <span class="zone-tag">À distance - toute la France</span>
+        <h2>Ce qu'on peut faire à distance</h2>
+        <div class="services-grid">
+          <div class="service-item">Dépannage et réparation logicielle</div>
+          <div class="service-item">Configuration de postes et de logiciels</div>
+          <div class="service-item">Mise en place de sauvegardes automatiques</div>
+          <div class="service-item"><a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Conseil sur les outils et les solutions</a></div>
+          <div class="service-item">Migration de données</div>
+          <div class="service-item">Sécurisation des accès et des mots de passe</div>
+          <div class="service-item"><a href="blog-microsoft-365.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Support Microsoft 365 et outils cloud</a></div>
+          <div class="service-item">Formation à l'utilisation des outils</div>
+          <div class="service-item">Assistance et support utilisateurs</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- POURQUOI LOCAL -->
-  <section class="local">
+  <!-- POURQUOI UN CONSULTANT INDÉPENDANT -->
+  <section class="independant">
     <div class="container">
       <div class="content-block">
-        <h2>Pourquoi choisir un consultant local à Albi</h2>
-        <p>Un technicien informatique de proximité connaît le tissu économique local. Réparation d'ordinateurs, dépannage réseau ou conseil - l'intervention se fait rapidement, sans délai logistique. Il s'implique dans la durée, suit l'évolution de votre structure, et reste joignable directement - sans passer par une hotline nationale ou un système de tickets. Pour les structures sans service informatique interne, découvrez la <a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">page infogérance</a>.</p>
+        <h2>Pourquoi choisir un consultant indépendant à distance</h2>
+        <p>Un grand prestataire vous met en file d'attente. Un <a href="a-propos.html" style="color:var(--accent);text-decoration:none;font-weight:500;">consultant indépendant</a> connaît votre environnement et répond directement. Pas de ticket, pas de rotation de techniciens - toujours le même interlocuteur, même à distance. Pour un suivi régulier à distance, découvrez la <a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">page infogérance</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONES -->
+  <section class="zones">
+    <div class="container">
+      <div class="content-block">
+        <h2>Toute la France</h2>
+        <p>Basé à <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Albi et dans le Tarn</a> et à <a href="saint-juery.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Saint-Juéry</a>, les interventions à distance couvrent toute la France. Le <a href="contact.html" style="color:var(--accent);text-decoration:none;font-weight:500;">premier rendez-vous</a> est offert pour évaluer votre situation.</p>
       </div>
     </div>
   </section>
@@ -529,23 +538,18 @@
       <div style="max-width:780px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem;">
 
         <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Êtes-vous basé à Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Basé à Saint-Juéry, à quelques minutes d'Albi. Les interventions sur site couvrent Albi et l'ensemble du bassin albigeois.</p>
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Peut-on vraiment tout régler à distance ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">La grande majorité des problèmes logiciels, de configuration et de conseil se règlent à distance. Pour les pannes matérielles, un déplacement sur site peut être nécessaire.</p>
         </details>
 
         <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Intervenez-vous dans toute la ville d'Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Oui, les interventions couvrent l'ensemble de la commune d'Albi ainsi que les communes voisines : Saint-Juéry, Lescure-d'Albigeois, Le Séquestre, Puygouzon, Marssac-sur-Tarn et Carmaux.</p>
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Comment se passe une intervention à distance ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Via une connexion sécurisée, l'accès à votre ordinateur est temporaire et sous votre contrôle. Vous voyez tout ce qui est fait en temps réel.</p>
         </details>
 
         <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Combien de temps faut-il pour obtenir une intervention à Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Les demandes sont traitées dans les meilleurs délais. Pour les situations urgentes, contactez directement par téléphone pour évaluer la situation rapidement.</p>
-        </details>
-
-        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Travaillez-vous avec des entreprises locales à Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Oui, l'activité est principalement orientée vers les professionnels - artisans, commerçants, professions libérales, associations - basés sur Albi et le Tarn. Pour les structures sans service informatique interne, une solution d'<a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">infogérance</a> peut être mise en place.</p>
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Intervenez-vous partout en France ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Oui, les interventions à distance couvrent toute la France, sans frais de déplacement.</p>
         </details>
 
       </div>

@@ -4,9 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
   <title>Conseil informatique Albi et à distance — Avis neutre, sans conflit d'intérêt | Andrea DE RE</title>
   <meta name="description" content="Conseil informatique indépendant à Albi (81) et à distance. Choix d'équipements, organisation des données, sécurité, logiciels. Avis neutre sans conflit d'intérêt. Premier rendez-vous offert." />
   <meta name="robots" content="index, follow" />
+  <meta name="author" content="Andrea DE RE" />
+  <link rel="me" href="https://www.linkedin.com/in/andreadere" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://andreadere.fr/conseil.html" />
   <meta property="og:title" content="Conseil informatique Albi et à distance — Avis neutre, sans conflit d'intérêt | Andrea DE RE" />
@@ -422,6 +426,47 @@
     }
 
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "En quoi ce conseil est-il différent d'un avis chez un revendeur ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un revendeur a intérêt à vous vendre un produit. Ici, la facturation porte uniquement sur le temps passé - aucune commission, aucun partenariat commercial ne guide les recommandations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pour quels types de décisions peut-on faire appel à vous ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Choix d'équipements, organisation des données, sécurité, logiciels, messagerie professionnelle, outils de travail collaboratif - tout ce qui touche à l'informatique de votre structure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le conseil se fait-il uniquement en présentiel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. La plupart des séances de conseil se font à distance, par appel vidéo ou téléphone. Un déplacement peut être organisé si nécessaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Rédigez-vous un compte-rendu après la séance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un résumé des recommandations peut être fourni sur demande, pour que vous gardiez une trace claire de ce qui a été décidé."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -439,6 +484,7 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="intervention.html">Intervention</a></li>
         <li><a href="conseil.html" class="active">Conseil</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
         <li><a href="a-propos.html">À propos</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html" class="nav-cta">Prendre rendez-vous</a></li>
@@ -451,7 +497,7 @@
     <div class="container">
       <div class="page-hero-inner">
         <span class="page-tag">Conseil</span>
-        <h1>Conseil informatique à <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;"><span>Albi</span></a> - un avis neutre, pas un catalogue</h1>
+        <h1>Conseil informatique à <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;"><span>Albi</span></a> — un avis neutre, pas un catalogue</h1>
         <p>Vous devez prendre une décision informatique et vous ne savez pas par où commencer ? Une aide pour voir clair, comparer les options, et choisir ce qui est vraiment adapté à votre situation - sans conflit d'intérêt.</p>
         <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
       </div>
@@ -463,10 +509,10 @@
     <div class="container">
       <p class="section-label">Ce qui différencie cette approche</p>
       <h2 class="section-title">Un conseil vraiment indépendant</h2>
-      <p class="section-lead">La plupart des gens qui vous conseillent en informatique ont quelque chose à vous vendre. Moi, non.</p>
+      <p class="section-lead">La plupart des gens qui conseillent en informatique ont quelque chose à vendre. Pas ici.</p>
 
       <div class="neutral-block">
-        <p>Aucun partenariat commercial ne dicte les recommandations faites ici. Conseil en infogérance, choix de solutions et accompagnement numérique sans engagement commercial. <strong>La facturation porte sur le <a href="intervention.html" style="color:var(--accent);text-decoration:none;font-weight:500;">temps passé</a> - jamais sur une marge produit.</strong> Quand une solution est recommandée, c'est parce qu'elle correspond à votre situation - pas parce qu'elle rapporte quelque chose.</p>
+        <p>Aucun partenariat commercial ne dicte les recommandations faites ici. Conseil en infogérance, choix de solutions et accompagnement numérique sans engagement commercial. <strong>La facturation porte sur le <a href="tarifs.html" style="color:var(--accent);text-decoration:none;font-weight:500;">temps passé</a> - jamais sur une marge produit.</strong> Quand une solution est recommandée, c'est parce qu'elle correspond à votre situation - pas parce qu'elle rapporte quelque chose.</p>
       </div>
     </div>
   </section>
@@ -492,7 +538,7 @@
         <div class="sujet-card">
           <div class="sujet-icon"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
           <h3>Quelle solution logicielle adopter ?</h3>
-          <p>Traitement de texte, comptabilité, gestion de photos, messagerie professionnelle. Des dizaines d'options existent — aide pour choisir la bonne.</p>
+          <p>Traitement de texte, comptabilité, gestion de photos, messagerie professionnelle. Des dizaines d'options existent - aide pour choisir la bonne.</p>
         </div>
         <div class="sujet-card">
           <div class="sujet-icon"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
@@ -529,8 +575,42 @@
           <li>Recommandation claire avec les raisons</li>
           <li>Mise en oeuvre accompagnée si souhaité</li>
           <li>Disponibilité maintenue une fois la solution en place</li>
+          <li><a href="blog-microsoft-365.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Support Microsoft 365 et outils cloud</a></li>
           <li>Facturation au temps uniquement - jamais de commission sur des produits</li>
         </ul>
+        <p style="font-size:0.95rem;color:var(--text-secondary);margin-top:1rem;">Pour voir des exemples concrets, consultez la page <a href="cas-concrets.html" style="color:var(--accent);text-decoration:none;font-weight:500;">cas concrets</a>.</p>
+        <p style="font-size:0.95rem;color:var(--text-secondary);margin-top:0.5rem;">Pour un suivi régulier, découvrez la <a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">page infogérance</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--white);padding:4rem 0;">
+    <div class="container">
+      <p class="section-label">Questions fréquentes</p>
+      <h2 class="section-title">Ce que vous voulez savoir</h2>
+      <div style="max-width:780px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem;">
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">En quoi ce conseil est-il différent d'un avis chez un revendeur ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Un revendeur a intérêt à vous vendre un produit. Ici, la facturation porte uniquement sur le temps passé - aucune commission, aucun partenariat commercial ne guide les recommandations.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Pour quels types de décisions peut-on faire appel à vous ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Choix d'équipements, organisation des données, sécurité, logiciels, messagerie professionnelle, <a href="blog-microsoft-365.html" style="color:var(--accent);text-decoration:none;font-weight:500;">outils de travail collaboratif</a> - tout ce qui touche à l'informatique de votre structure.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Le conseil se fait-il uniquement en présentiel ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Non. La plupart des séances de conseil se font à distance, par appel vidéo ou téléphone. Un déplacement peut être organisé si nécessaire.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Rédigez-vous un compte-rendu après la séance ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Un résumé des recommandations peut être fourni sur demande, pour que vous gardiez une trace claire de ce qui a été décidé.</p>
+        </details>
+
       </div>
     </div>
   </section>
@@ -540,8 +620,8 @@
     <div class="container">
       <span class="badge-offert">Offre de bienvenue</span>
       <h2>Premier rendez-vous offert</h2>
-      <p>On fait le point sur votre situation, vous posez vos questions, et vous repartez avec une vision claire de vos options - sans engagement.</p>
-      <a href="contact.html" class="btn btn-accent">Réserver maintenant</a>
+      <p>Premier échange, évaluation de la situation, vision claire - sans engagement et sans frais.</p>
+      <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
     </div>
   </section>
 
@@ -557,6 +637,14 @@
       <a href="mentions-legales.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Mentions légales</a>
       &nbsp;·&nbsp;
       <a href="albi.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Albi</a>
+      &nbsp;·&nbsp;
+      <a href="saint-juery.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Saint-Juéry</a>
+      &nbsp;·&nbsp;
+      <a href="cas-concrets.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Cas concrets</a>
+      &nbsp;·&nbsp;
+      <a href="distance.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">À distance</a>
+      &nbsp;·&nbsp;
+      <a href="infogerance.html" style="color:var(--text-secondary);font-size:0.8rem;text-decoration:none;">Infogérance</a>
     </div>
   </footer>
 

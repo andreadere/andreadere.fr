@@ -6,17 +6,17 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
-  <title>Technicien et consultant informatique Albi — Dépannage, réparation et conseil | Andrea DE RE</title>
-  <meta name="description" content="Technicien et consultant informatique à Albi (81). Dépannage, réparation, assistance et maintenance informatique pour les professionnels. Intervention sur site à Albi et le Tarn. Premier rendez-vous offert." />
+  <title>Infogérance à Albi et dans le Tarn — Maintenance informatique pour TPE et PME | Andrea DE RE</title>
+  <meta name="description" content="Infogérance informatique à Albi et dans le Tarn (81). Maintenance, assistance et suivi informatique pour les TPE et PME sans service informatique interne. Interlocuteur unique, sans abonnement imposé." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Andrea DE RE" />
   <link rel="me" href="https://www.linkedin.com/in/andreadere" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://andreadere.fr/albi.html" />
-  <meta property="og:title" content="Technicien et consultant informatique Albi — Dépannage, réparation et conseil | Andrea DE RE" />
-  <meta property="og:description" content="Technicien et consultant informatique à Albi (81). Dépannage, réparation, assistance et maintenance informatique pour les professionnels. Intervention sur site à Albi et le Tarn." />
+  <meta property="og:url" content="https://andreadere.fr/infogerance.html" />
+  <meta property="og:title" content="Infogérance à Albi et dans le Tarn — Maintenance informatique pour TPE et PME | Andrea DE RE" />
+  <meta property="og:description" content="Infogérance informatique à Albi et dans le Tarn (81). Maintenance, assistance et suivi informatique pour les TPE et PME sans service informatique interne. Interlocuteur unique, sans abonnement imposé." />
   <meta property="og:locale" content="fr_FR" />
-  <link rel="canonical" href="https://andreadere.fr/albi.html" />
+  <link rel="canonical" href="https://andreadere.fr/infogerance.html" />
 
   <!-- Schema.org LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -31,7 +31,7 @@
     ],
     "serviceType": ["Dépannage informatique", "Maintenance informatique", "Support informatique", "Conseil informatique", "Infogérance"],
     "description": "Consultant informatique indépendant spécialisé en intervention et conseil, sans conflit d'intérêt commercial. Intervient sur Albi, Saint-Juéry et le Tarn.",
-    "url": "https://andreadere.fr/albi.html",
+    "url": "https://andreadere.fr",
     "telephone": "+33744744927",
     "email": "contact@andreadere.fr",
     "address": {
@@ -45,6 +45,39 @@
     "sameAs": [
       "https://www.linkedin.com/in/andreadere",
       "https://andreadere.fr"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "L'infogérance est-elle réservée aux grandes entreprises ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. L'infogérance s'adapte à toutes les tailles de structures. Une TPE avec 3 postes a autant besoin d'un suivi régulier qu'une PME avec 50 postes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il un contrat d'engagement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. La facturation porte sur le temps passé, sans abonnement ni engagement minimum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous sur site ou à distance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les deux. Sur site à Albi et dans le Tarn, à distance partout en France."
+        }
+      }
     ]
   }
   </script>
@@ -261,19 +294,7 @@
       line-height: 1.25;
     }
 
-    .section-lead {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      line-height: 1.75;
-    }
-
-    /* ── SECTIONS CONTENU ── */
-    .intro { background: var(--white); }
-    .interventions { background: var(--bg); }
-    .zones { background: var(--white); }
-    .local { background: var(--bg); }
-
+    /* ── CONTENT BLOCKS ── */
     .content-block { max-width: 780px; }
 
     .content-block h2 {
@@ -293,23 +314,45 @@
 
     .content-block p:last-child { margin-bottom: 0; }
 
-    /* ── ZONES GRID ── */
-    .zones-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.25rem;
+    /* ── GRILLE COUVERTURE ── */
+    .cover-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+      max-width: 900px;
     }
 
-    .zone-tag {
-      display: inline-block;
-      background: #e8f4fc;
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 0.3rem 0.85rem;
-      border-radius: 4px;
+    .cover-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--white);
+      align-items: flex-start;
     }
+
+    .cover-item::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+
+    .cover-item span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    /* ── FAQ ── */
+    /* (uses inline styles like other pages) */
 
     /* ── BANDEAU CTA ── */
     .cta-band {
@@ -393,47 +436,6 @@
     }
 
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Êtes-vous basé à Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Basé à Saint-Juéry, à quelques minutes d'Albi. Les interventions sur site couvrent Albi et l'ensemble du bassin albigeois."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Intervenez-vous dans toute la ville d'Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, les interventions couvrent l'ensemble de la commune d'Albi ainsi que les communes voisines : Saint-Juéry, Lescure-d'Albigeois, Le Séquestre, Puygouzon, Marssac-sur-Tarn et Carmaux."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Combien de temps faut-il pour obtenir une intervention à Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Les demandes sont traitées dans les meilleurs délais. Pour les situations urgentes, contactez directement par téléphone pour évaluer la situation rapidement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Travaillez-vous avec des entreprises locales à Albi ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, l'activité est principalement orientée vers les professionnels - artisans, commerçants, professions libérales, associations - basés sur Albi et le Tarn."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -463,60 +465,57 @@
   <section class="page-hero">
     <div class="container">
       <div class="page-hero-inner">
-        <span class="page-tag">Intervention locale</span>
-        <h1>Technicien et consultant informatique à Albi — dépannage, réparation, conseil et assistance</h1>
-        <p>Basé à Saint-Juéry, à quelques minutes d'Albi. Un seul interlocuteur, disponible 7 jours sur 7.</p>
+        <span class="page-tag">Infogérance</span>
+        <h1>Infogérance à Albi et dans le Tarn — maintenance et assistance pour les TPE et PME</h1>
+        <p>Un interlocuteur unique pour tous vos besoins informatiques. Sans abonnement imposé, sans ticket anonyme.</p>
         <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
       </div>
     </div>
   </section>
 
-  <!-- INTRODUCTION -->
-  <section class="intro">
+  <!-- QU'EST-CE QUE L'INFOGÉRANCE -->
+  <section style="background:var(--white);padding:4rem 0;">
     <div class="container">
       <div class="content-block">
-        <p class="section-label">Présentation</p>
-        <p>Basé à Saint-Juéry, à quelques minutes d'Albi, Andrea DE RE intervient sur le bassin albigeois pour tous les besoins informatiques des professionnels et des structures de taille humaine. <a href="intervention.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Dépannage sur site</a>, maintenance, <a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">infogérance</a>, <a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">conseil sans conflit d'intérêt</a> - un seul interlocuteur, disponible 7 jours sur 7.</p>
+        <h2>Qu'est-ce que l'infogérance ?</h2>
+        <p>L'infogérance, c'est confier la gestion de son informatique à un prestataire externe. Pour une TPE ou une PME sans service informatique interne, c'est la solution pour ne pas gérer seul les pannes, les mises à jour, les sauvegardes et la sécurité. Pas besoin d'embaucher un informaticien à temps plein - un <a href="a-propos.html" style="color:var(--accent);text-decoration:none;font-weight:500;">consultant de proximité</a> suffit.</p>
       </div>
     </div>
   </section>
 
-  <!-- INTERVENTIONS -->
-  <section class="interventions">
+  <!-- CE QUI EST DIFFÉRENT ICI -->
+  <section style="background:var(--bg);padding:4rem 0;">
     <div class="container">
       <div class="content-block">
-        <h2>Interventions à Albi et ses environs</h2>
-        <p>Que ce soit pour <a href="blog-panne-ordinateur.html" style="color:var(--accent);text-decoration:none;font-weight:500;">une panne qui bloque votre activité</a>, une installation de réseau, la configuration d'un nouveau poste ou un <a href="conseil.html" style="color:var(--accent);text-decoration:none;font-weight:500;">conseil sur vos outils numériques</a>, les <a href="tarifs.html" style="color:var(--accent);text-decoration:none;font-weight:500;">interventions</a> se font directement dans vos locaux. Pas de délai d'acheminement, pas de centre d'appels - une réponse directe, par une personne qui connaît votre environnement.</p>
+        <h2>Ce qui est différent ici</h2>
+        <p>Les grands prestataires d'infogérance fonctionnent avec des contrats annuels, des forfaits fixes et des équipes qui tournent. Ici, la <a href="tarifs.html" style="color:var(--accent);text-decoration:none;font-weight:500;">facturation</a> porte uniquement sur le temps passé - pas d'abonnement, pas de forfait imposé. Un seul interlocuteur qui connaît votre environnement, disponible directement, sans hotline. Pour comprendre pourquoi la réactivité fait la différence, lisez <a href="blog-prestataire-reactivite.html" style="color:var(--accent);text-decoration:none;font-weight:500;">cet article sur les prestataires informatiques</a>.</p>
       </div>
     </div>
   </section>
 
-  <!-- ZONES COUVERTES -->
-  <section class="zones">
+  <!-- CE QUE ÇA COUVRE -->
+  <section style="background:var(--white);padding:4rem 0;">
     <div class="container">
       <div class="content-block">
-        <h2>Zones couvertes</h2>
-        <p>Les déplacements couvrent Albi et ses environs : Saint-Juéry, Lescure-d'Albigeois, Le Séquestre, Puygouzon, Marssac-sur-Tarn et Carmaux. Pour les autres communes du Tarn, chaque demande est étudiée au cas par cas. Les interventions à distance couvrent toute la France.</p>
-        <div class="zones-tags">
-          <span class="zone-tag">Albi</span>
-          <span class="zone-tag">Saint-Juéry</span>
-          <span class="zone-tag">Lescure-d'Albigeois</span>
-          <span class="zone-tag">Le Séquestre</span>
-          <span class="zone-tag">Puygouzon</span>
-          <span class="zone-tag">Marssac-sur-Tarn</span>
-          <span class="zone-tag">Carmaux</span>
-          <span class="zone-tag">À distance - toute la France</span>
+        <h2>Ce que ça couvre</h2>
+        <div class="cover-grid">
+          <div class="cover-item"><span>Maintenance préventive et corrective</span></div>
+          <div class="cover-item"><span><a href="intervention.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Suivi et mises à jour des postes</a></span></div>
+          <div class="cover-item"><span>Gestion des <a href="blog-securite-tpe.html" style="color:var(--accent);text-decoration:none;font-weight:500;">sauvegardes</a></span></div>
+          <div class="cover-item"><span>Sécurité et antivirus</span></div>
+          <div class="cover-item"><span>Support utilisateurs</span></div>
+          <div class="cover-item"><span>Conseil sur les évolutions</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- POURQUOI LOCAL -->
-  <section class="local">
+  <!-- CONCLUSION / ZONES -->
+  <section style="background:var(--bg);padding:4rem 0;">
     <div class="container">
       <div class="content-block">
-        <h2>Pourquoi choisir un consultant local à Albi</h2>
-        <p>Un technicien informatique de proximité connaît le tissu économique local. Réparation d'ordinateurs, dépannage réseau ou conseil - l'intervention se fait rapidement, sans délai logistique. Il s'implique dans la durée, suit l'évolution de votre structure, et reste joignable directement - sans passer par une hotline nationale ou un système de tickets. Pour les structures sans service informatique interne, découvrez la <a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">page infogérance</a>.</p>
+        <h2>Basé à Albi, disponible partout en France</h2>
+        <p>Interventions sur site à <a href="albi.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Albi et dans le Tarn</a>, ou <a href="distance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">à distance</a> partout en France. Le <a href="contact.html" style="color:var(--accent);text-decoration:none;font-weight:500;">premier rendez-vous</a> est offert pour évaluer votre situation.</p>
       </div>
     </div>
   </section>
@@ -529,23 +528,18 @@
       <div style="max-width:780px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem;">
 
         <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Êtes-vous basé à Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Basé à Saint-Juéry, à quelques minutes d'Albi. Les interventions sur site couvrent Albi et l'ensemble du bassin albigeois.</p>
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">L'infogérance est-elle réservée aux grandes entreprises ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Non. L'infogérance s'adapte à toutes les tailles de structures. Une TPE avec 3 postes a autant besoin d'un suivi régulier qu'une PME avec 50 postes.</p>
         </details>
 
         <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Intervenez-vous dans toute la ville d'Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Oui, les interventions couvrent l'ensemble de la commune d'Albi ainsi que les communes voisines : Saint-Juéry, Lescure-d'Albigeois, Le Séquestre, Puygouzon, Marssac-sur-Tarn et Carmaux.</p>
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Y a-t-il un contrat d'engagement ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Non. La facturation porte sur le temps passé, sans abonnement ni engagement minimum.</p>
         </details>
 
         <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Combien de temps faut-il pour obtenir une intervention à Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Les demandes sont traitées dans les meilleurs délais. Pour les situations urgentes, contactez directement par téléphone pour évaluer la situation rapidement.</p>
-        </details>
-
-        <details style="border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;background:var(--bg);">
-          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Travaillez-vous avec des entreprises locales à Albi ?</summary>
-          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Oui, l'activité est principalement orientée vers les professionnels - artisans, commerçants, professions libérales, associations - basés sur Albi et le Tarn. Pour les structures sans service informatique interne, une solution d'<a href="infogerance.html" style="color:var(--accent);text-decoration:none;font-weight:500;">infogérance</a> peut être mise en place.</p>
+          <summary style="font-weight:600;color:var(--primary);cursor:pointer;list-style:none;font-size:1rem;">Intervenez-vous sur site ou à distance ?</summary>
+          <p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.95rem;">Les deux. Sur site à Albi et dans le Tarn, à distance partout en France.</p>
         </details>
 
       </div>
@@ -557,7 +551,7 @@
     <div class="container">
       <span class="badge-offert">Offre de bienvenue</span>
       <h2>Premier rendez-vous offert</h2>
-      <p>Premier échange, évaluation de la situation, vision claire - sans engagement et sans frais.</p>
+      <p>Premier échange, évaluation de la situation, réponse claire - sans engagement et sans frais.</p>
       <a href="contact.html" class="btn btn-accent">Prendre rendez-vous</a>
     </div>
   </section>
